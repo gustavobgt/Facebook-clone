@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Classes auxiliares */
+.container {
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Header */
+#header {
+    padding: 0px 125px 0 95px;
+    background: linear-gradient(to bottom, #4b67a1, #3b5998);
+    height: 4em;
+}
+
+#header-logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+#header-logo a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+}
+
+#header-login {
+    float: right;
+}
+
+.header-login-box {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.header-login-box label {
+    color: white;
+    font-size: 0.65em;
+}
+
+.header-login-box input[name=login],
+.header-login-box input[name=senha]
+{
+    margin-top: 0px;
+    height: 17px;
+    width: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.822);
+}
+
+.header-login-box input[type=submit] {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 18px;
+    padding: 0 4px;
+    cursor: pointer;
+    color: white;
+    background-color: #5a78b8;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.header-login-box input[type=submit]:hover {
+    background: linear-gradient(to bottom, #4b67a1, #3b5998);
+}
+
+.esqueceu-conta {
+    float: right;
+    margin-right: 93px;
+    text-decoration: none;
+    color: #9cb4d8;
+    font-size: 0.65em;
+}
+
+.esqueceu-conta:hover {
+    text-decoration: underline;
+}
