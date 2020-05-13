@@ -4,90 +4,97 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 /* Classes auxiliares */
-.container {
-    max-width: 1050px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 2%;
+#container {
+    background: linear-gradient(to bottom, #fdfefe, #eaedf4, #d4d9e8);
+    margin: 0 auto; /*deixar centralizado*/
+    min-width: 900px;
+    max-width: 1370px;
+}
+
+header#topo {
+    position: relative; /*para poder adicionar absolute nas outras*/
+    z-index: 0; /*ficar atrás dos menus*/
+    background: linear-gradient(to bottom, #4d68a1, #3c5a99, #3b5998);
+    /*height: 1.4em; que diferença faz aqui?*/
+    min-height: 83px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
 }
 
 .clear {
     clear: both;
 }
 
-/* Header */
-#header {
-    padding: 0px 125px 0 95px;
-    background: linear-gradient(to bottom, #4b67a1, #3b5998);
-    height: 4em;
-}
-
+/* header-logo*/
 #header-logo {
-    float: left;
-    margin-top: 10px;
-    margin-left: 25px;
+    position: absolute;
+    top: 18px;
+    left: 180px;
+    z-index: 1; /*ficar na frente do header*/
 }
 
-#header-logo a{
+#header-logo a {
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.25em;
     color: white;
 }
 
+/* header-login */
 #header-login {
-    float: right;
+    position: absolute;
+    top: 8px;
+    right: 190px;
+    z-index: 1; /*ficar na frente do header*/
 }
 
 .header-login-box {
     display: inline-block;
-    margin-right: 6px;
+    margin-right: 8px;
 }
 
 .header-login-box label {
     color: white;
-    font-size: 0.65em;
+    font-size: 0.8em;
 }
 
-.header-login-box input[name=login],
-.header-login-box input[name=senha]
-{
-    margin-top: 0px;
-    height: 17px;
-    width: 120px;
-    border: 1px solid rgba(0, 0, 0, 0.822);
+.header-login-box input {
+    margin-top: 5px;
+    height: 22px;
+    width: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.822);*/
 }
 
 .header-login-box input[type=submit] {
-    outline: none;
-    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.336);
     border-radius: 2px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    height: 18px;
-    padding: 0 4px;
+    height: 24px;
+    width: 49px;
     cursor: pointer;
     color: white;
-    background-color: #5a78b8;
-    font-size: 0.6em;
-    font-weight: bold;
+    background-color: #4267b2;
 }
 
 .header-login-box input[type=submit]:hover {
-    background: linear-gradient(to bottom, #4b67a1, #3b5998);
+    background: #365899;
 }
 
-.esqueceu-conta {
-    float: right;
-    margin-right: 93px;
+.header-login-box input[type=submit]:active {
+    background: #29487d;
+    border: none;
+}
+
+#header-login a {
+    font-size: 0.8em;
+    margin-left: 168px;
     text-decoration: none;
     color: #9cb4d8;
-    font-size: 0.65em;
 }
 
-.esqueceu-conta:hover {
+#header-login a:hover {
     text-decoration: underline;
 }
