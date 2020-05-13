@@ -9,16 +9,15 @@ body {
 /* Classes auxiliares */
 #container {
     background: linear-gradient(to bottom, #fdfefe, #eaedf4, #d4d9e8);
-    margin: 0 auto; /*deixar centralizado*/
+    margin: 0 auto;
     min-width: 900px;
     max-width: 1370px;
 }
 
 header#topo {
-    position: relative; /*para poder adicionar absolute nas outras*/
-    z-index: 0; /*ficar atrás dos menus*/
+    position: relative; 
+    z-index: 0; 
     background: linear-gradient(to bottom, #4d68a1, #3c5a99, #3b5998);
-    /*height: 1.4em; que diferença faz aqui?*/
     min-height: 83px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.404);
 }
@@ -32,7 +31,7 @@ header#topo {
     position: absolute;
     top: 18px;
     left: 180px;
-    z-index: 1; /*ficar na frente do header*/
+    z-index: 1;
 }
 
 #header-logo a {
@@ -46,7 +45,7 @@ header#topo {
     position: absolute;
     top: 8px;
     right: 190px;
-    z-index: 1; /*ficar na frente do header*/
+    z-index: 1; 
 }
 
 .header-login-box {
@@ -100,9 +99,7 @@ header#topo {
 }
 
 /* Área principal */
-
 #area-principal {
-    border: 1px solid red;
     float: left;
     width: 550px;
     margin-left: 180px;
@@ -110,7 +107,7 @@ header#topo {
 }
 
 #area-principal h2 {
-    color:#07215a;
+    color:#0e385f;
     font-size: 1.3em;
 }
 
@@ -118,8 +115,78 @@ header#topo {
 #area-cadastro {
     border: 1px solid red;
     float: right;
-    width: 600px;
+    width: 500px;
     padding: 20px 0px;
+    margin-right: 100px;
+}
+
+#area-cadastro h1 {
+    color: #333333;
+    font-size: 2.3em;
+    margin-bottom: 6px;
+}
+
+#area-cadastro p {
+    color: #333333;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+form#area-cadastro-form {
+    border: 2px solid red;
+}
+
+#area-cadastro input[type="text"],
+#area-cadastro input[type="password"]
+{
+    font-size: 18px;
+    height: 25px;
+    width: 180px;
+    border: 1px solid;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin: 4px;
+}
+
+#area-cadastro input[id=email],
+#area-cadastro input[id=senha]
+{
+    width: 394px;
+}
+
+#data p,
+#sexo p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 10px 0px 5px;
+    color: #90949c;
+    font-size: 1.1em;
+    
+}
+
+select {
+    width: 55px;
+    height: 30px;
+    font-size: 13px;
+    padding: 5px;
+    border: 1px solid #ccd0d5;
+}
+
+select#dia, select#mes, select#ano {
+    width: 70px;
+}
+
+#sexo .sexo {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d2129;
+    padding: 0px 10px 0px 3px;
+}
+
+#sexo input[type="radio"] {
+    margin: 0px 5px;
 }
 
 /* footer */
