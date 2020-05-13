@@ -98,3 +98,33 @@ header#topo {
 #header-login a:hover {
     text-decoration: underline;
 }
+
+/* Área principal */
+
+#area-principal {
+    border: 1px solid red;
+    float: left;
+    width: 550px;
+    margin-left: 180px;
+    padding-top: 34px;
+}
+
+#area-principal h2 {
+    color:#07215a;
+    font-size: 1.3em;
+}
+
+/* Área lateral */
+#area-cadastro {
+    border: 1px solid red;
+    float: right;
+    width: 600px;
+    padding: 20px 0px;
+}
+
+/* footer */
+
+#footer {
+    clear: both;
+    background: red;
+}
