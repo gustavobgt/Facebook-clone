@@ -2,16 +2,21 @@
     margin: 0;
     padding: 0;
 }
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Classes auxiliares */
 #container {
     background: linear-gradient(to bottom, #fdfefe, #eaedf4, #d4d9e8);
     margin: 0 auto;
-    min-width: 900px;
-    max-width: 1370px;
+    min-width: 1400px;
+    max-width: auto;
 }
 
 header#topo {
@@ -35,7 +40,7 @@ header#topo {
 }
 
 #header-logo a {
-    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.25em;
     color: white;
 }
@@ -44,7 +49,7 @@ header#topo {
 #header-login {
     position: absolute;
     top: 8px;
-    right: 190px;
+    right: 230px;
     z-index: 1; 
 }
 
@@ -55,7 +60,7 @@ header#topo {
 
 .header-login-box label {
     color: white;
-    font-size: 0.8em;
+    font-size: 0.75em;
 }
 
 .header-login-box input {
@@ -90,7 +95,6 @@ header#topo {
 #header-login a {
     font-size: 0.8em;
     margin-left: 168px;
-    text-decoration: none;
     color: #9cb4d8;
 }
 
@@ -99,11 +103,16 @@ header#topo {
 }
 
 /* Área principal */
+#container-principal {
+    position: relative;
+    min-height: 650px;
+}
+
 #area-principal {
-    float: left;
-    width: 550px;
-    margin-left: 180px;
-    padding-top: 34px;
+    position: absolute;
+    top: 40px;
+    left: 180px;
+    width: 537px;
 }
 
 #area-principal h2 {
@@ -113,11 +122,14 @@ header#topo {
 
 /* Área lateral */
 #area-cadastro {
-    border: 1px solid red;
-    float: right;
-    width: 500px;
-    padding: 20px 0px;
-    margin-right: 100px;
+    position: absolute;
+    top: 20px;
+    right: 210px;
+    width: 430px;
+}
+
+#area-cadastro #area-cadastro-form {
+    margin-left: 3px;
 }
 
 #area-cadastro h1 {
@@ -132,27 +144,23 @@ header#topo {
     margin-bottom: 20px;
 }
 
-form#area-cadastro-form {
-    border: 2px solid red;
-}
-
 #area-cadastro input[type="text"],
 #area-cadastro input[type="password"]
 {
     font-size: 18px;
-    height: 25px;
-    width: 180px;
+    height: 20px;
+    width: 175px;
     border: 1px solid;
     border-color: #bdc7d8;
     border-radius: 5px;
     padding: 8px 10px;
-    margin: 4px;
+    margin: 4px 4px 4px 0px;
 }
 
 #area-cadastro input[id=email],
 #area-cadastro input[id=senha]
 {
-    width: 394px;
+    width: 380px;
 }
 
 #data p,
@@ -162,7 +170,7 @@ form#area-cadastro-form {
     font-weight: bold;
     margin: 10px 0px 5px;
     color: #90949c;
-    font-size: 1.1em;
+    font-size: 0.95em;
     
 }
 
@@ -189,9 +197,58 @@ select#dia, select#mes, select#ano {
     margin: 0px 5px;
 }
 
+#politica p {
+    margin-top: 30px;
+    font-size: 0.7em;
+    color: rgb(90, 90, 90);
+}
+
+#politica p a {
+    color: #2a4888;
+}
+
+#politica p a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    border-radius: 5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    font-size: 19px;
+    cursor: pointer;
+    color: white;
+    margin-top: 5px;
+    width: 194px;
+    height: 39px;
+    border: 1px solid;
+    border-color: #3b6e22 #3b6e22 #2e5115;
+}
+
+button:hover {
+    background: linear-gradient(#79bc64, #578843);
+}
+
+#criar-pagina p {
+    margin-top: 40px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgba(83, 82, 82, 0.685);
+}
+
+#criar-pagina a {
+    color: #2a4888cc;
+}
+
+#criar-pagina a:hover {
+    text-decoration: underline;
+}
+
 /* footer */
 
 #footer {
-    clear: both;
+    position: relative;
     background: red;
 }
