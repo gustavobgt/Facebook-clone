@@ -30,12 +30,12 @@
           </div>
 
           <div class="header-login-box">
-            <label for="senha">Senha</label><br />
-            <input type="password" name="senha" id="senha" />
+            <label for="password">Senha</label><br />
+            <input type="password" name="password" id="password" />
           </div>
 
           <div class="header-login-box">
-            <input type="submit" name="acao" value="Entrar" />
+            <input type="submit" name="submit" value="Entrar" />
           </div>
           <br />
 
@@ -47,9 +47,10 @@
       </header>
       <!-- /fim do topo -->
 
-      <!-- Início container-principal -->
-      <div id="container-principal">
-        <div id="area-principal">
+      <!-- Início main-container -->
+      <div id="main-container">
+        <!-- Início main-area -->
+        <div id="main-area">
           <h2>
             O Facebook ajuda você a se conectar e <br />
             compartilhar com as pessoas que fazem parte <br />
@@ -57,13 +58,14 @@
           </h2>
           <img src="images/mapa-mundo.png" alt="" />
         </div>
+        <!-- /fim main-area -->
 
-        <!-- Início area-cadastro -->
-        <div id="area-cadastro">
+        <!-- Início registration-area -->
+        <div id="registration-area">
           <h1>Abra uma conta</h1>
           <p>É rápido e fácil.</p>
-
-          <form id="area-cadastro-form">
+          <!-- Início registration-area-form -->
+          <form id="registration-area-form">
             <label for="nome"></label>
             <input type="text" id="nome" placeholder="Nome" />
 
@@ -82,7 +84,7 @@
 
             <div id="data">
               <p>Data de nascimento</p>
-              <select name="dia" id="dia">
+              <select name="day" id="day">
                 <option value="0">Dia</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -117,7 +119,7 @@
                 <option value="31">31</option>
               </select>
 
-              <select name="mes" id="mes">
+              <select name="month" id="month">
                 <option value="0">Mês</option>
                 <option value="1">Jan</option>
                 <option value="2">Fev</option>
@@ -133,7 +135,7 @@
                 <option value="12">Dez</option>
               </select>
 
-              <select name="ano" id="ano">
+              <select name="year" id="year">
                 <option value="0">Ano</option>
                 <option value="1">2005</option>
                 <option value="2">2004</option>
@@ -155,32 +157,32 @@
               </select>
             </div>
 
-            <div id="sexo">
+            <div id="gender">
               <p>Gênero</p>
 
-              <label class="sexo">
-                <input type="radio" name="sexo" id="feminino" />Feminino
+              <label class="gender">
+                <input type="radio" name="gender" id="feminino" />Feminino
               </label>
 
-              <label class="sexo">
-                <input type="radio" name="sexo" id="masculino" />Masculino
+              <label class="gender">
+                <input type="radio" name="gender" id="masculino" />Masculino
               </label>
 
-              <label class="sexo">
+              <label class="gender">
                 <input
                   type="radio"
-                  name="sexo"
+                  name="gender"
                   id="personalizado"
                 />Personalizado
               </label>
             </div>
 
-            <div id="politica">
+            <div id="politics">
               <p>
                 Ao clicar em Cadastre-se, você concorda com nossos
-                <a class="politica" href="">Termos,<br /></a>
-                <a class="politica" href="">Política de Dados</a> e
-                <a class="politica" href="">Política de Cookies</a>. Você pode
+                <a class="politics" href="">Termos,<br /></a>
+                <a class="politics" href="">Política de Dados</a> e
+                <a class="politics" href="">Política de Cookies</a>. Você pode
                 receber <br />notificações por SMS e pode cancelar isso quando
                 quiser.
               </p>
@@ -190,17 +192,18 @@
               Cadastre-se
             </button>
           </form>
+          <!-- /fim registration-area-form -->
 
-          <div id="criar-pagina">
+          <div id="create-page">
             <p>
               <a href="">Criar uma Página</a> para uma celebridade, banda ou
               empresa.
             </p>
           </div>
         </div>
-        <!-- /fim area-cadastro -->
+        <!-- /fim egistration-area -->
       </div>
-      <!-- /fim container-principal -->
+      <!-- /fim main-container -->
 
       <div id="footer">
         Footer

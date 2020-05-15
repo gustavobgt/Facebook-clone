@@ -103,49 +103,49 @@ header#topo {
 }
 
 /* Área principal */
-#container-principal {
+#main-container {
   position: relative;
   min-height: 650px;
 }
 
-#area-principal {
+#main-area {
   position: absolute;
   top: 40px;
   left: 180px;
   width: 537px;
 }
 
-#area-principal h2 {
+#main-area h2 {
   color: #0e385f;
   font-size: 1.3em;
 }
 
 /* Área lateral */
-#area-cadastro {
+#registration-area {
   position: absolute;
   top: 20px;
   right: 210px;
   width: 430px;
 }
 
-#area-cadastro #area-cadastro-form {
+#registration-area #registration-area-form {
   margin-left: 3px;
 }
 
-#area-cadastro h1 {
+#registration-area h1 {
   color: #333333;
   font-size: 2.3em;
   margin-bottom: 6px;
 }
 
-#area-cadastro p {
+#registration-area p {
   color: #333333;
   font-size: 1.2em;
   margin-bottom: 20px;
 }
 
-#area-cadastro input[type='text'],
-#area-cadastro input[type='password'] {
+#registration-area input[type='text'],
+#registration-area input[type='password'] {
   font-size: 18px;
   height: 20px;
   width: 175px;
@@ -156,13 +156,13 @@ header#topo {
   margin: 4px 4px 4px 0px;
 }
 
-#area-cadastro input[id='email'],
-#area-cadastro input[id='senha'] {
+#registration-area input[id='email'],
+#registration-area input[id='password'] {
   width: 380px;
 }
 
 #data p,
-#sexo p {
+#gender p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: 10px 0px 5px;
@@ -178,34 +178,34 @@ select {
   border: 1px solid #ccd0d5;
 }
 
-select#dia,
-select#mes,
-select#ano {
+select#day,
+select#month,
+select#year {
   width: 70px;
 }
 
-#sexo .sexo {
+#gender .gender {
   font-size: 1.2em;
   font-family: Arial, Helvetica, sans-serif;
   color: #1d2129;
   padding: 0px 10px 0px 3px;
 }
 
-#sexo input[type='radio'] {
+#gender input[type='radio'] {
   margin: 0px 5px;
 }
 
-#politica p {
+#politics p {
   margin-top: 30px;
   font-size: 0.7em;
   color: rgb(90, 90, 90);
 }
 
-#politica p a {
+#politics p a {
   color: #2a4888;
 }
 
-#politica p a:hover {
+#politics p a:hover {
   text-decoration: underline;
 }
 
@@ -229,18 +229,18 @@ button:hover {
   background: linear-gradient(#79bc64, #578843);
 }
 
-#criar-pagina p {
+#create-page p {
   margin-top: 40px;
   font-size: 0.8em;
   font-weight: bold;
   color: rgba(83, 82, 82, 0.685);
 }
 
-#criar-pagina a {
+#create-page a {
   color: #2a4888cc;
 }
 
-#criar-pagina a:hover {
+#create-page a:hover {
   text-decoration: underline;
 }
 
