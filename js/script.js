@@ -1,3 +1,4 @@
+console.log('Test');
 window.addEventListener('load', start);
 
 // global variables
@@ -25,6 +26,41 @@ function start() {
   insertOptions(selectDay, days);
   insertOptions(selectMonth, months);
   insertOptions(selectYear, years);
+
+  function checkMonth(event) {
+    function render() {
+      function generateDays(month) {
+        var countDays = 0;
+        // prettier-ignore
+        switch (parseInt(month)) {
+          /*Meses com 31 dias: Janeiro(1), Março(3), Maio(5), 
+          Julho(7), Agosto(8), Outubro(10) e dezembro(12)*/
+          case 1: case 3: case 5: case 7: 
+          case 8: case 10: case 12: countDays = 31; break;
+          /*Meses com 30 dias: Abril(4), Junho(6), Setembro(9), 
+          Novembro(11)*/
+          case 4: case 6: case 9: case 11: countDays = 30; break;
+          /*Fevereiro: 29 ou 28 dias*/
+          default: countDays = 29; break;
+        }
+
+        for (let i = 1; i <= countDays; i++) {
+          days.push(i);
+        }
+      }
+
+      selectDay.innerHTML = '';
+      days.splice(1, 31);
+
+      var selectedMonth = event.target.value;
+      generateDays(selectedMonth);
+      insertOptions(selectDay, days);
+    }
+
+    render();
+  }
+
+  selectMonth.addEventListener('change', checkMonth);
 }
 
 function insertOptions(element, array) {
@@ -33,7 +69,7 @@ function insertOptions(element, array) {
 
     var option = document.createElement('option');
     option.textContent = currentDate;
-
+    option.value = i;
     element.appendChild(option);
   }
 }
