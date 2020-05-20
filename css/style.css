@@ -105,7 +105,7 @@ header#topo {
 /* Área principal */
 #main-container {
   position: relative;
-  min-height: 650px;
+  min-height: 600px;
 }
 
 #main-area {
@@ -246,7 +246,54 @@ button:hover {
 
 /* footer */
 
+footer {
+  background: white;
+  font-size: 0.75em;
+}
+
 #footer {
-  position: relative;
-  background: red;
+  padding-top: 10px;
+  margin: 0 auto;
+  width: 990px;
+  background-color: white;
+}
+
+#languages {
+  margin: 10px 0px;
+  border-bottom: 1px solid rgb(200, 196, 196);
+  padding-bottom: 10px;
+}
+
+#languages span {
+  color: gray;
+  margin-right: 5px;
+}
+
+#languages a {
+  margin-right: 5px;
+  color: #0737a0cc;
+}
+
+#languages a:hover {
+  text-decoration: underline;
+}
+
+#bottom {
+  margin-bottom: 15px;
+}
+
+#bottom a {
+  margin: 0px 15px 6px 0px;
+  color: #0737a0cc;
+  display: inline-block;
+}
+
+#bottom a:hover {
+  text-decoration: underline;
+}
+
+#copy p {
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 20px;
 }
