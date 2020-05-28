@@ -1,4 +1,7 @@
 // global variables
+const date = new Date();
+const currentYear = date.getFullYear();
+
 let days = ['Dia'];
 const months = [
   'Mês',
@@ -17,50 +20,55 @@ const months = [
 ];
 let years = ['Ano'];
 
-let date = new Date();
-const currentYear = date.getFullYear();
-
-/* Funções das variáveis booleanas:
- * isLeapYear -> Lembrar se o ano é ou não bissexto
- * -Caso o usuário escolha o mês de fevereiro apos ter escolhido
- * um ano bissexto
- * isFebruary -> Lembrar se o mês é ou não fevereiro
- * -Caso o usuário escolha um ano bissexto após ter escolhido
- * o mês de fevereiro
- */
 let isLeapYear = false;
 let isFebruary = false;
 
-generateDates(days, years);
+let selectDay = null;
+let selectMonth = null;
+let selectYear = null;
 
-function generateDates(arrayDays, arrayYears) {
+const setDays = (days) => {
   for (let i = 1; i <= 31; i++) {
-    arrayDays.push(i);
+    let newDay = i;
+    days = [...days, newDay];
   }
-  for (let i = currentYear; i >= 1990; i--) {
-    arrayYears.push(i);
+
+  return days;
+};
+
+const setYears = (years) => {
+  for (let i = currentYear; i >= currentYear - 100; i--) {
+    let newYear = i;
+    years = [...years, newYear];
   }
-}
+
+  return years;
+};
+
+days = setDays(days);
+years = setYears(years);
 
 window.addEventListener('load', () => {
-  let selectDay = document.querySelector('#day');
-  let selectMonth = document.querySelector('#month');
-  let selectYear = document.querySelector('#year');
+  selectDay = document.querySelector('#day');
+  selectMonth = document.querySelector('#month');
+  selectYear = document.querySelector('#year');
 
-  insertOptionsDaysMonths(selectDay, days);
-  insertOptionsDaysMonths(selectMonth, months);
-  insertOptionsYears(selectYear, years);
+  insertDaysMonthsOptions(selectDay, days);
+  insertDaysMonthsOptions(selectMonth, months);
+  insertYearsOptions(years);
 
   function checkMonth(event) {
     function generateDays(month) {
       let countDays = 0;
       // prettier-ignore
       switch (parseInt(month)) {
-        /*Meses com 31 dias: Janeiro(1), Março(3), Maio(5), 
-        Julho(7), Agosto(8), Outubro(10) e dezembro(12)*/
-        case 1: case 3: case 5: case 7: 
-        case 8: case 10: case 12: countDays = 31; 
-        isFebruary = false;
+        /*
+         * Se o ano for bissexto tem 29 dias
+         * Se o ano não for bissexto tem 28 dias
+         */
+        case 2:
+        isLeapYear === true ? countDays = 29 : countDays = 28;
+        isFebruary = true;
         break;
 
         /*Meses com 30 dias: Abril(4), Junho(6), Setembro(9), 
@@ -68,15 +76,12 @@ window.addEventListener('load', () => {
         case 4: case 6: case 9: case 11: countDays = 30; 
         isFebruary = false;
         break;
-        
-        default: 
-        /*
-         * Se o ano for bissexto tem 29
-         * Se o ano não for bissexto tem 28
-         */
-        isLeapYear === true ? countDays = 29 : countDays = 28;
-        isFebruary = true;
-        break;
+
+        /*Meses com 31 dias*/
+        default:
+        countDays = 31; 
+        isFebruary = false;
+        break; 
       }
 
       for (let i = 1; i <= countDays; i++) {
@@ -93,7 +98,7 @@ window.addEventListener('load', () => {
 
     render();
     generateDays(selectedMonth);
-    insertOptionsDaysMonths(selectDay, days);
+    insertDaysMonthsOptions(selectDay, days);
   }
 
   function checkYear(event) {
@@ -105,7 +110,7 @@ window.addEventListener('load', () => {
         days.push(i);
       }
 
-      insertOptionsDaysMonths(selectDay, days);
+      insertDaysMonthsOptions(selectDay, days);
     }
 
     let currentYear = parseInt(event.target.value);
@@ -127,9 +132,11 @@ window.addEventListener('load', () => {
 
   selectMonth.addEventListener('change', checkMonth);
   selectYear.addEventListener('change', checkYear);
+
+  // handleYearsOptions();
 });
 
-function insertOptionsDaysMonths(element, array) {
+function insertDaysMonthsOptions(element, array) {
   for (let i = 0; i < array.length; i++) {
     let currentDate = array[i];
 
@@ -140,12 +147,16 @@ function insertOptionsDaysMonths(element, array) {
   }
 }
 
-function insertOptionsYears(element, array) {
-  for (let i = 0; i < array.length; i++) {
-    let currentDate = array[i];
+function insertYearsOptions(array) {
+  let optionsHTML = '';
 
-    let option = document.createElement('option');
-    option.textContent = currentDate;
-    element.appendChild(option);
-  }
+  array.forEach((year) => {
+    const optionHTML = `
+    <option>${year}</option>
+    `;
+
+    optionsHTML += optionHTML;
+  });
+
+  selectYear.innerHTML = optionsHTML;
 }
