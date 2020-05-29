@@ -149,7 +149,8 @@ header#topo {
 }
 
 #registration-area input[type='text'],
-#registration-area input[type='new-password'] {
+#registration-area input[type='email'],
+#registration-area input[type='password'] {
   font-size: 18px;
   height: 20px;
   width: 175px;

@@ -26,12 +26,12 @@
         <form id="header-login">
           <div class="header-login-box">
             <label for="login">Email ou telefone</label><br />
-            <input type="text" name="login" id="login" />
+            <input type="email" name="login" id="login" required />
           </div>
 
           <div class="header-login-box">
             <label for="password">Senha</label><br />
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" required />
           </div>
 
           <div class="header-login-box">
@@ -66,44 +66,61 @@
           <p>É rápido e fácil.</p>
           <!-- Início registration-area-form -->
           <form id="registration-area-form">
-            <label for="nome"></label>
-            <input type="text" id="nome" placeholder="Nome" />
+            <label for="first-name"></label>
+            <input type="text" id="first-name" placeholder="Nome" required />
 
-            <label for="sobrenome"></label>
-            <input type="text" id="sobrenome" placeholder="Sobrenome" /><br />
+            <label for="last-name"></label>
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Sobrenome"
+              required
+            /><br />
 
             <label for="email"></label>
             <input
-              type="text"
+              type="email"
               id="email"
               placeholder="Celular ou email"
+              required
             /><br />
 
             <label for="new-password"></label>
             <input
-              type="new-password"
+              type="password"
               id="new-password"
               placeholder="Nova senha"
+              required
             /><br />
 
             <div id="date">
               <p>Data de nascimento</p>
-              <select name="day" id="day"></select>
+              <select name="day" id="day" required></select>
 
-              <select name="month" id="month"></select>
+              <select name="month" id="month" required></select>
 
-              <select name="year" id="year"></select>
+              <select name="year" id="year" required></select>
             </div>
 
             <div id="gender">
               <p>Gênero</p>
 
               <label class="gender">
-                <input type="radio" name="gender" id="feminino" />Feminino
+                <input
+                  type="radio"
+                  name="gender"
+                  id="feminino"
+                  required
+                />Feminino
               </label>
 
               <label class="gender">
-                <input type="radio" name="gender" id="masculino" />Masculino
+                <input
+                  type="radio"
+                  name="gender"
+                  id="masculino"
+                  required
+                />Masculino
               </label>
 
               <label class="gender">
@@ -111,6 +128,7 @@
                   type="radio"
                   name="gender"
                   id="personalizado"
+                  required
                 />Personalizado
               </label>
             </div>
